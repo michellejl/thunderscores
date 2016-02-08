@@ -116,6 +116,12 @@ add_action( 'widgets_init', 'thunderscores_widgets_init' );
 function thunderscores_scripts() {
 	wp_enqueue_style( 'thunderscores-style', get_stylesheet_uri() );
 
+	// Adding Google Fonts: Roboto and Patrick Hand SC
+		// Using Google for hosting:
+			// wp_enqueue_style( 'thunderscores-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Patrick+Hand+SC');
+		// Self hosting files:
+			wp_enqueue_style( 'thunderscores-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css' );
+
 	wp_enqueue_script( 'thunderscores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'thunderscores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
