@@ -5,10 +5,10 @@ $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
-$color__text-screen: #10a2a6;
+$color__text-screen: red;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: #10a2a6;
+$color__link: red;
 $color__link-visited: $color__link;
 $color__link-hover: $color__link;
 $color__text-main: #404040;
@@ -19,15 +19,32 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 
+/* Theme Colors */
+$color_primary: #17607D;
+$color_second: #88a825;
+$color_third: #ED8C2B;
+$color_forth: #cf4a30;
+$color_fifth: #911146;
+$color_sixth: #35203b;
 
 
 
-/* COLORS
+/* OPTIONS
 
-PURPLE: #2f2933
-BLUE: #10a2a6
-TEAL: #29d9c2
-GREEN: #bdf271
-YELLOW: #ffffa6
+$color_primary: #DE5B49;
+$color_second: #E37B40;
+$color_third: #F0CA4D;
+$color_forth: #61B287;
+$color_fifth: #30AFB2;
+$color_sixth: #17607D;
+
+
+$color_primary: #004358;
+$color_second: #1f8a70;
+$color_third: #bedb39;
+$color_forth: #ffe11a;
+$color_fifth: #fd7400;
+$color_sixth: #911146;
+
 
 */

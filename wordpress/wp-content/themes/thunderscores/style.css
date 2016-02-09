@@ -42,13 +42,24 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-/* COLORS
+/* Theme Colors */
+/* OPTIONS
 
-PURPLE: #2f2933
-BLUE: #10a2a6
-TEAL: #29d9c2
-GREEN: #bdf271
-YELLOW: #ffffa6
+$color_primary: #DE5B49;
+$color_second: #E37B40;
+$color_third: #F0CA4D;
+$color_forth: #61B287;
+$color_fifth: #30AFB2;
+$color_sixth: #17607D;
+
+
+$color_primary: #004358;
+$color_second: #1f8a70;
+$color_third: #bedb39;
+$color_forth: #ffe11a;
+$color_fifth: #fd7400;
+$color_sixth: #911146;
+
 
 */
 /*--------------------------------------------------------------
@@ -471,11 +482,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #10a2a6; }
+  color: red; }
   a:visited {
-    color: #10a2a6; }
+    color: red; }
   a:hover, a:focus, a:active {
-    color: #10a2a6; }
+    color: red; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -561,7 +572,7 @@ a {
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #10a2a6;
+    color: red;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
@@ -626,6 +637,44 @@ a {
 .site-footer:after {
   clear: both; }
 
+/*--------------------------------------------------------------
+# Headers
+--------------------------------------------------------------*/
+.site-header {
+  background-color: #fff;
+  border: 2px solid #000; }
+
+.site-branding {
+  text-align: center; }
+
+.site-title {
+  margin: 1.7em 1em 0;
+  font-family: "Patrick Hand", cursive;
+  font-size: 2.4em;
+  font-weight: bold;
+  line-height: 1.3em;
+  color: #17607D;
+  text-transform: uppercase;
+  word-break: break-word; }
+  .site-title a {
+    text-decoration: none;
+    color: inherit; }
+    .site-title a:hover, .site-title a:focus {
+      text-decoration: underline; }
+  .site-title::after {
+    display: block;
+    content: "";
+    margin: .8em auto 0;
+    width: 2em;
+    border-bottom: solid 2px #000; }
+
+.site-description {
+  font-size: 1.1em;
+  color: #88a825; }
+
+@media screen and (max-width: 30em) {
+  .site-title {
+    font-size: 2em; } }
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
