@@ -642,7 +642,33 @@ a {
 --------------------------------------------------------------*/
 .site-header {
   background-color: #fff;
-  border: 2px solid #000; }
+  background-size: cover; }
+
+@media screen and (min-width: 50em) {
+  .site-header {
+    min-height: 4em; } }
+.site-logo {
+  position: relative; }
+  .site-logo a {
+    position: absolute;
+    z-index: 10;
+    top: 1em;
+    left: 1em;
+    display: block;
+    width: 2.3em;
+    height: 2.3em;
+    background: black;
+    border: 2px solid white;
+    text-decoration: none;
+    color: #ffffff; }
+    .site-logo a .site-firstletter {
+      font-family: "Patrick Hand", cursive;
+      font-size: 1.5em;
+      text-align: center;
+      line-height: 1.3em; }
+      .site-logo a .site-firstletter:hover {
+        background: white;
+        border-color: black; }
 
 .site-branding {
   text-align: center; }
@@ -653,7 +679,6 @@ a {
   font-size: 2.4em;
   font-weight: bold;
   line-height: 1.3em;
-  color: #17607D;
   text-transform: uppercase;
   word-break: break-word; }
   .site-title a {
@@ -669,8 +694,7 @@ a {
     border-bottom: solid 2px #000; }
 
 .site-description {
-  font-size: 1.1em;
-  color: #88a825; }
+  font-size: 1.1em; }
 
 @media screen and (max-width: 30em) {
   .site-title {

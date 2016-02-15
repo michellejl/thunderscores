@@ -24,8 +24,31 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'thunderscores' ); ?></a>
 
+	<?php if ( get_header_image() ) { ?>
+	<header id="masthead" class="site-header" role="banner" style="background-image: url(<?php header_image(); ?>)">
+	<?php } else { ?>
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
+	<?php } ?>
+
+		<?php // Display site icon or first letter as logo ?>
+		<div class="site-logo">
+			<?php $site_title = get_bloginfo( 'name' ); ?>
+			<a href="<?php echo esc_url( home_url ( '/' ) ); ?>" rel="home">
+				<div class="screen-reader-text">
+					<?php printf(esc_html__('Go to the homepage') ); ?>
+				</div>
+				<?php if ( has_site_icon() ) {
+					$site_icon = esc_url( get_site_icon_url( 270 ) ); ?>
+					<img src="<?php echo $site_icon ?>" class="site-icon" alt="">
+				<?php } else { ?>
+				<div class="site-firstletter" aria-hidden="true">
+					<?php echo substr($site_title, 0, 1); ?>
+				</div>
+				<?php } ?>
+			</a>
+		</div>
+
+		<div class="site-branding <?php if ( is_singular() ) { echo 'screen-reader-text'; } ?>">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
