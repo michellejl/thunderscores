@@ -117,12 +117,20 @@ function thunderscores_scripts() {
 	wp_enqueue_style( 'thunderscores-style', get_stylesheet_uri() );
 
 	// Adding Google Fonts: Roboto and Patrick Hand SC
-		// Using Google for hosting:
-			// wp_enqueue_style( 'thunderscores-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Patrick+Hand+SC');
-		// Self hosting files:
-			wp_enqueue_style( 'thunderscores-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css' );
+	// Using Google for hosting:
+	// wp_enqueue_style( 'thunderscores-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Patrick+Hand+SC');
+	// Self hosting files:
+	wp_enqueue_style( 'thunderscores-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css' );
 
-	wp_enqueue_script( 'thunderscores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	// Add Font Awesome icons (http://fontawesome.io)
+	wp_enqueue_style( 'tuhnderscores-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
+
+
+	wp_enqueue_script( 'thunderscores-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
+	wp_localize_script( 'thunderscores-navigation', 'screenReaderText', array(
+		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'thunderscores' ) . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'thunderscores' ) . '</span>',
+	) );
 
 	wp_enqueue_script( 'thunderscores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
