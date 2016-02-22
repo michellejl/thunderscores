@@ -37,7 +37,10 @@ function thunderscores_posted_on() {
 	// display the author avatar if the author has a Gravatar
 	$author_id = get_the_author_meta( 'ID' );
 	if (thunderscores_validate_gravatar ( $author_id ) ) {
-		echo '<div class="author_avatar">' . get_avatar( $author_id ) . '</div>';
+		echo '<div class="meta-content has-avatar">';
+			echo '<div class="author-avatar">' . get_avatar( $author_id ) . '</div>';
+	} else {
+		echo '<div class="meta-content">';
 	}
 
 	echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
@@ -47,6 +50,8 @@ function thunderscores_posted_on() {
 		comments_popup_link( esc_html__( 'Leave a comment', 'thunderscores' ), esc_html__( '1 Comment', 'thunderscores' ), esc_html__( '% Comments', 'thunderscores' ) );
 		echo '</span>';
 	}
+
+	echo '</div><!-- /.meta-content-->';
 
 }
 endif;
