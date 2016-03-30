@@ -1,0 +1,1 @@
+Starting to create a custom theme for WordPress using underscores starter theme, and vaguely following a tutorial
